@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>开始计时：<span id="count"></span></p>
+	<input type="button" id="startBtn" value="开始">
+	<br>
+	<br>
+	<input type="button" id="stopBtn" value="停止">
+	<script>
+		var startBtn=document.getElementById('startBtn');
+		var stopBtn=document.getElementById('stopBtn');
+		function startCount(){
+			 setInterval(function(){console.log("hello");},1000)
+		}
+		function stopCount(){
+			clearInterval(setInterval(function(){console.log("hello");},1000));
+		}
+		//console.log(timer)
+		startBtn.onclick=startCount;
+		 stopBtn.onclick=stopCount;
+	</script>
+</body>
+</html>
